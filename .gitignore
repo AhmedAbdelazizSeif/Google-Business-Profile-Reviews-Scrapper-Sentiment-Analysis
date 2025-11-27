@@ -1,0 +1,101 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Environment variables
+.env
+.env.local
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Excel files (output)
+output/reviews/*.xlsx
+output/reports/*.xlsx
+!output/.gitkeep
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Selenium
+selenium/
+ChromeProfile/
+
+# Credentials
+credentials.json
+secrets.json
+config.ini
+*.pem
+*.key
+
+# Build artifacts
+*.spec
+build/
+dist/
+
+# Test coverage
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+
+# Data files (keep structure but ignore actual data)
+data/*.csv
+data/*.xlsx
+!data/arabic_names.csv
+!data/.gitkeep
+
+# Temporary files
+*.tmp
+*.temp
+~$*.xlsx
+~$*.xls
+
+# Screenshots (optional - comment out if you want to include them)
+# assets/screenshots/*.png
+# assets/screenshots/*.jpg
