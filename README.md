@@ -114,7 +114,7 @@ google-reviews-sentiment-analysis/
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/google-reviews-sentiment-analysis.git
+git clone https://github.com/AhmedAbdelazizSeif/google-reviews-sentiment-analysis.git
 cd google-reviews-sentiment-analysis
 ```
 
