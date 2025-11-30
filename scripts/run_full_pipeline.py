@@ -27,9 +27,19 @@ def main():
     print("GOOGLE REVIEWS SENTIMENT ANALYSIS PIPELINE")
     print("="*80)
     
-    # Configuration
-    REVIEWS_URL = "https://business.google.com/groups/YOUR_GROUP_ID/reviews"
-    WEEKS_TO_SCRAPE = 4
+    # Configuration from environment variables
+    try:
+        from src.env_manager import get_env_manager
+        env = get_env_manager()
+        REVIEWS_URL = env.get_reviews_url()
+        WEEKS_TO_SCRAPE = env.get_int('SCRAPING_WEEKS', 4)
+        print(f"\n✓ Configuration loaded from .env file")
+    except Exception as e:
+        print(f"\n⚠️  Warning: Could not load .env configuration: {e}")
+        print("Please ensure .env file is configured properly.")
+        REVIEWS_URL = os.getenv('GOOGLE_REVIEWS_URL', 'https://business.google.com/groups/YOUR_GROUP_ID/reviews')
+        WEEKS_TO_SCRAPE = int(os.getenv('SCRAPING_WEEKS', '4'))
+    
     LOGO_PATH = os.path.join('assets', 'logo.png')
     NAMES_FILE = os.path.join('data', 'arabic_names.csv')
     
